@@ -13,4 +13,7 @@ systemctl disable iwd.service
 
 # Fix locale gen
 
-Edit `/etc/locale.gen` file enabling the locale code you whant
+Edit `/etc/locale.gen` file enabling the locale code you whant then run
+```sh
+sudo locale-gen
+```
