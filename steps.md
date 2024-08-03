@@ -10,3 +10,7 @@ If you have NetworkManager and iwctl service both enabled, disable the iwctl ser
 ```sh
 systemctl disable iwd.service
 ```
+
+# Fix locale gen
+
+Edit `/etc/locale.gen` file enabling the locale code you whant
