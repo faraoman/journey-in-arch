@@ -17,3 +17,16 @@ Edit `/etc/locale.gen` file enabling the locale code you whant then run
 ```sh
 sudo locale-gen
 ```
+
+# Enable mount disk without root access (KDE-Polkit)
+
+Edit `/usr/share/polkit-1/rules.d/org.freedesktop.UDisks2.rules` file (if not exist, create it) as
+```js
+polkit.addRule(function(action, subject) {
+    if ((action.id == "org.freedesktop.udisks2.filesystem-mount-system" ||
+         action.id == "org.freedesktop.udisks2.filesystem-mount") &&
+        subject.isInGroup("wheel")) {
+        return polkit.Result.YES;
+    }
+});
+```
