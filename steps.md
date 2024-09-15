@@ -52,3 +52,16 @@ pacman -Qqd | pacman -Rsu --print -
 # remove packages
 pacman -Qtdq | sudo pacman -Rns --noconfirm -
 ```
+
+# Cleanup packages
+
+```sh
+sudo pacman -Sc
+```
+
+# Read log of service
+
+```sh
+# journalctl -u {service_name}
+journalctl -u status archlinux-keyring-wkd-sync.service
+```
