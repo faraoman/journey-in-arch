@@ -35,3 +35,11 @@ polkit.addRule(function(action, subject) {
 ```sh
 dconf write /org/gnome/desktop/vm/preferences/button-layout "':minimize,maximize,close'"
 ```
+
+# Refresh keys and install upgrades
+
+```sh
+sudo pacman-key --refresh-keys
+sudo pacman -Sy archlinux-keyring --noconfirm
+sudo pacman -Syu --noconfirm
+```
