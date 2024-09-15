@@ -43,3 +43,12 @@ sudo pacman-key --refresh-keys
 sudo pacman -Sy archlinux-keyring --noconfirm
 sudo pacman -Syu --noconfirm
 ```
+
+# List orphaned packages and remove them
+
+```sh
+# list packages
+pacman -Qqd | pacman -Rsu --print -
+# remove packages
+pacman -Qtdq | sudo pacman -Rns --noconfirm -
+```
