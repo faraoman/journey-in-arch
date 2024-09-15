@@ -65,3 +65,16 @@ sudo pacman -Sc
 # journalctl -u {service_name}
 journalctl -u status archlinux-keyring-wkd-sync.service
 ```
+
+# Export installed packages
+
+```sh
+# all packages
+pacman -Qqe > packages.list
+# foreign packages
+pacman -Qqem > packages.list
+# all explicit packages
+pacman -Qqen
+# all aur
+pacman -Qqem
+```
