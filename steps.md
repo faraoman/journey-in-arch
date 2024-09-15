@@ -30,3 +30,8 @@ polkit.addRule(function(action, subject) {
     }
 });
 ```
+# Fix Gnome Button Layout (Minimize,Maximize,Close)
+
+```sh
+dconf write /org/gnome/desktop/vm/preferences/button-layout "':minimize,maximize,close'"
+```
