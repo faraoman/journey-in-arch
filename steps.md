@@ -78,3 +78,17 @@ pacman -Qqen
 # all aur
 pacman -Qqem
 ```
+
+# PacAur
+
+```sh
+sudo pacman -S git meson fakechroot expac jq gtest
+git clone https://aur.archlinux.org/auracle-git.git
+cd auracle-git/
+makepkg -i
+cd ..
+git clone https://aur.archlinux.org/pacaur.git
+cd pacaur/
+makepkg -si
+sudo pacman -R meson fakechroot expac jq gtest
+```
