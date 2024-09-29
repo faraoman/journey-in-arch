@@ -92,3 +92,11 @@ cd pacaur/
 makepkg -si
 sudo pacman -R meson fakechroot expac jq gtest
 ```
+
+# Enabled EDITOR environment variabile
+
+User level edit `~/.profile` and `~./bashrc` adding `export EDITOR=nano`
+
+System level edit `/etc/environment` adding `export EDITOR=nano`
+
+
