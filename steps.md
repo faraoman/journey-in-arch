@@ -99,4 +99,5 @@ User level edit `~/.profile` and `~./bashrc` adding `export EDITOR=nano`
 
 System level edit `/etc/environment` adding `export EDITOR=nano`
 
-
+# simil rank mirror
+https://bbs.archlinux.org/viewtopic.php?id=268187
