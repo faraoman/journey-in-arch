@@ -1,0 +1,17 @@
+[Desktop Entry]
+Comment[it_IT]=
+Comment=
+Exec=systemctl poweroff
+GenericName[it_IT]=
+GenericName=
+Icon=system-shutdown-symbolic
+MimeType=
+Name[it_IT]=Spegni
+Name=Poweroff
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
