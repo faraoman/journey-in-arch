@@ -101,3 +101,8 @@ System level edit `/etc/environment` adding `export EDITOR=nano`
 
 # simil rank mirror
 https://bbs.archlinux.org/viewtopic.php?id=268187
+
+# RankMirror with reflector
+```sh
+reflector --country "DE,IT" --latest 10 --sort rate --fastest 5 --save /etc/pacman.d/mirrorlist
+```
