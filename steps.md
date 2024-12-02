@@ -110,3 +110,4 @@ reflector --country "DE,IT" --latest 10 --sort rate --fastest 5 --save /etc/pacm
 # Useful shortcut
 alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 rename hostname='hostnamectl hostname NAME'
+change os info = /etc/os-release
