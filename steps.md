@@ -112,4 +112,4 @@ alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 rename hostname='hostnamectl hostname NAME'
 change os info = /etc/os-release (https://www.commandlinux.com/man-page/man5/os-release.5.html,https://www.linux.org/docs/man5/os-release.html)
 distro name generator = https://codepen.io/semibran/pen/wazzaj
-
+extra pacman utils = sudo pacman -S pacman-contrib
