@@ -114,3 +114,4 @@ change os info = /etc/os-release (https://www.commandlinux.com/man-page/man5/os-
 distro name generator = https://codepen.io/semibran/pen/wazzaj
 extra pacman utils = sudo pacman -S pacman-contrib
 edit pre-login informations = /etc/issue
+find file recursively = find /path/to/directory -name "pattern"
