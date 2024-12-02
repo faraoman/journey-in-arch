@@ -107,3 +107,6 @@ https://bbs.archlinux.org/viewtopic.php?id=268187
 pacman -S reflector rsync
 reflector --country "DE,IT" --latest 10 --sort rate --fastest 5 --save /etc/pacman.d/mirrorlist
 ```
+# Useful shortcut
+alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+rename hostname='hostnamectl hostname NAME'
