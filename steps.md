@@ -20,6 +20,10 @@ sudo locale-gen
 
 # Enable mount disk without root access (KDE-Polkit)
 
+Require `polkit-kde-agent` package installed
+
+Check if polkit kde is installed with `pgrep -af polkit-kde`
+
 Edit `/usr/share/polkit-1/rules.d/org.freedesktop.UDisks2.rules` file (if not exist, create it) as
 ```js
 polkit.addRule(function(action, subject) {
