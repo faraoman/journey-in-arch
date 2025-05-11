@@ -123,6 +123,13 @@ plasma-discover
 In the KMenu Editor append before the comman "plasma-discover" `export $(dbus-launch)` and it will be "export $(dbus-launch) && plasma-discover" then save the menu.
 Also use this in the .bashrc/.zshrc files, `export $(dbus-launch)` as new line
 
+# Bottles won't open
+Rebuild/Reinstall this packages:
+
+```sh
+pacaur -S python-pathvalidate icoextract patool python-fvs vkbasalt-cli --noedit --noconfirm
+```
+
 # Useful shortcut
 alias cls='clear'
 alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
