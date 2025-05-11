@@ -111,8 +111,47 @@ https://bbs.archlinux.org/viewtopic.php?id=268187
 pacman -S reflector rsync
 reflector --country "DE,IT" --latest 10 --sort rate --fastest 5 --save /etc/pacman.d/mirrorlist
 ```
+# Fix Discover (Kde) won't opening by menu also by konsole (QThread exceptions)
+Before the execution (konsole) the `export $(dbus-launch)`
+Ex:
+```sh
+export $(dbus-launch)
+plasma-discover
+# or contracted export $(dbus-launch) && plasma-discover
+```
+
+In the KMenu Editor append before the comman "plasma-discover" `export $(dbus-launch)` and it will be "export $(dbus-launch) && plasma-discover" then save the menu.
+Also use this in the .bashrc/.zshrc files, `export $(dbus-launch)` as new line
+
 # Useful shortcut
+alias cls='clear'
 alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias pacman-cleanup='pacman -Qtdq | sudo pacman -Rnsu -'
+alias pacman-refresh-mirrors='sudo reflector --country "DE,IT" --latest 10 --sort rate --fastest 5 --save /etc/pacman.d/mirrorlist'
+alias pacaur-check-upgrades='pacaur -Qua'
+alias yay-check='yay -Qua'
+alias ls='ls --color=auto -sh'
+## Bash
+```sh
+echo "alias cls='clear'" >> .bashrc
+echo "alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'" >> .bashrc
+echo "alias pacman-cleanup='pacman -Qtdq | sudo pacman -Rnsu -'" >> .bashrc
+echo "alias pacman-refresh-mirrors='sudo reflector --country "DE,IT" --latest 10 --sort rate --fastest 5 --save /etc/pacman.d/mirrorlist'" >> .bashrc
+echo "alias pacaur-check-upgrades='pacaur -Qua'" >> .bashrc
+echo "alias yay-check='yay -Qua'" >> .bashrc
+echo "alias ls='ls --color=auto -sh'" >> .bashrc
+```
+## ZSH
+```sh
+echo "alias cls='clear'" >> .zshrc
+echo "alias grub-update='sudo grub-mkconfig -o /boot/grub/grub.cfg'" >> .zshrc
+echo "alias pacman-cleanup='pacman -Qtdq | sudo pacman -Rnsu -'" >> .zshrc
+echo "alias pacman-refresh-mirrors='sudo reflector --country "DE,IT" --latest 10 --sort rate --fastest 5 --save /etc/pacman.d/mirrorlist'" >> .zshrc
+echo "alias pacaur-check-upgrades='pacaur -Qua'" >> .zshrc
+echo "alias yay-check='yay -Qua'" >> .zshrc
+echo "alias ls='ls --color=auto -sh'" >> .zshrc
+```
+
 rename hostname='hostnamectl hostname NAME'
 change os info = /etc/os-release (https://www.commandlinux.com/man-page/man5/os-release.5.html,https://www.linux.org/docs/man5/os-release.html)
 distro name generator = https://codepen.io/semibran/pen/wazzaj
